@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_copy_to_clipboard import st_copy_to_clipboard
+from st_copy_to_clipboard import st_copy_to_clipboard
 
 def obtener_datos_paciente():
     """Obtiene los datos del paciente a través de una interfaz."""
