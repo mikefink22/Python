@@ -1,3 +1,48 @@
-.idea/
-venv
-env
+# Sistema operativo y entorno de desarrollo (Windows)
+
+# ---------------------------------------------------
+Thumbs.db  # Miniaturas de Windows
+Desktop.ini # Archivos de configuración de carpetas de Windows
+*.log      # Archivos de log
+.DS_Store  # Archivos de macOS 
+
+.ipynb_checkpoints/ # Checkpoints de Jupyter (importante para notebooks)
+venv/
+env/
+*.pyc              # Archivos compilados de Python
+__pycache__/       # Directorio de archivos compilados de Python
+.pytest_cache/     # Caché de pytest
+.mypy_cache/       # Caché de mypy (para type checking)
+.vscode/           # Configuraciones de VS Code (a veces es útil ignorarlas)
+.idea/             # Configuraciones de PyCharm/IntelliJ (si usas esos IDEs)
+
+# Archivos temporales y de caché
+# ----------------------------
+*~                 # Archivos de backup de algunos editores (ej. Vim)
+*.bak              # Archivos de backup genéricos
+*.swp              # Archivos swap de Vim
+._* # Archivos de recursos de macOS (pueden aparecer en Windows si se copian desde Mac)
+.DS_Store          # Otro por si acaso
+
+# Credenciales y archivos sensibles
+# --------------------------------------------------
+.env               # Archivos de variables de entorno
+config.ini         # Archivos de configuración con credenciales (si no están versionados)
+credentials.json   # Archivos con credenciales
+token.txt          # Tokens de acceso
+*.pem              # Claves privadas
+
+# A futuro (reorganizar carpetas)
+# Datos y resultados de estadística (a menudo grandes o generados)
+# -------------------------------------------------------------
+
+
+
+# Modelos y artefactos de Machine Learning (si aplica)
+# --------------------------------------------------
+
+
+# Jupyter Notebooks (consideraciones especiales)
+# ---------------------------------------------
+# Las que no son parte del código fuente.
+
