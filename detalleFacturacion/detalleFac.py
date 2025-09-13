@@ -1,5 +1,5 @@
 import streamlit as st
-from pyperclip import copy
+from streamlit_copy_to_clipboard import st_copy_to_clipboard
 
 def obtener_datos_paciente():
     """Obtiene los datos del paciente a través de una interfaz."""
@@ -42,8 +42,8 @@ def obtener_datos_paciente():
 
     # Crear un botón para copiar el detalle
     if st.button("Copiar al portapapeles"):
-        copy(detalle)
-        st.success("¡El detalle de facturación se ha copiado al portapapeles!")
+     st_copy_to_clipboard(detalle)
+     st.success("¡El detalle de facturación se ha copiado al portapapeles!")
 
     return detalle
 
