@@ -1,2 +1,2 @@
 streamlit
-pyperclip
+streamlit_copy_to_clipboard
