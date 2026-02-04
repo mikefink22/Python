@@ -1,2 +1,2 @@
 streamlit
-streamlit_copy_to_clipboard
+st-copy-to-clipboard

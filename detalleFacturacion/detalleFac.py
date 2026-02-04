@@ -1,6 +1,9 @@
 import streamlit as st
 from st_copy_to_clipboard import st_copy_to_clipboard
+<<<<<<< HEAD
 from datetime import datetime
+=======
+>>>>>>> 89be71143e1625d76a3c75129aa126a8228c822a
 
 def obtener_datos_paciente():
     """Obtiene los datos del paciente a través de una interfaz."""
