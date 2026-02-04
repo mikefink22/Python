@@ -35,7 +35,7 @@ token.txt          # Tokens de acceso
 # A futuro (reorganizar carpetas)
 # Datos y resultados de estadística (a menudo grandes o generados)
 # -------------------------------------------------------------
-
+*.csv
 
 
 # Modelos y artefactos de Machine Learning (si aplica)
