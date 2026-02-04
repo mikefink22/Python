@@ -1,5 +1,6 @@
 import streamlit as st
-from streamlit_copy_to_clipboard import st_copy_to_clipboard
+from st_copy_to_clipboard import st_copy_to_clipboard
+from datetime import datetime
 
 def obtener_datos_paciente():
     """Obtiene los datos del paciente a través de una interfaz."""
@@ -14,6 +15,20 @@ def obtener_datos_paciente():
         prestacion = st.text_input("Ingrese otra prestación:")
     else:
         prestacion = prestacion_seleccionada
+    
+    # Selector de fecha de consulta
+    seleccionar_fecha = st.checkbox("Elegir fecha de consulta")
+    
+    if seleccionar_fecha:
+        fecha_consulta = st.date_input(
+            "Fecha de consulta:",
+            value=datetime.today(),
+            format="DD/MM/YYYY"
+        )
+        fecha_str = fecha_consulta.strftime("%d/%m/%Y")
+        prestacion_con_fecha = f"{prestacion} Consulta {fecha_str}"
+    else:
+        prestacion_con_fecha = prestacion
     
     tiene_obra_social = st.radio("¿Tiene obra social?", ("Sí", "No"))
 
@@ -36,9 +51,9 @@ def obtener_datos_paciente():
     # Concatenar los datos para formar el detalle
     #detalle = f"{prestacion} {obra_social} {numero_afiliado} {condicion_iva}"
     if tiene_obra_social == "Sí":
-        detalle = f"{prestacion} - Afiliado {obra_social} ({numero_afiliado}) - {condicion_iva}"
+        detalle = f"{prestacion_con_fecha} - Afiliado {obra_social} ({numero_afiliado}) - {condicion_iva}"
     else:
-        detalle = f"{prestacion} - {obra_social} - DNI ({dni}) - {condicion_iva}"
+        detalle = f"{prestacion_con_fecha} - {obra_social} - DNI ({dni}) - {condicion_iva}"
 
     # Crear un botón para copiar el detalle
     if st.button("Copiar al portapapeles"):
